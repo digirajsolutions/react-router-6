@@ -1,13 +1,14 @@
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
+import Navbar from '../components/Navbar'
 
 const Home = () => {
   return (
-    <section className='section'>
-      <h2>Home Page</h2>
-      <Link className='btn' to='/about'>
-        Go to About
-      </Link>
-    </section>
+    <>
+      <Navbar />
+      <section className='section'>
+        <Outlet />
+      </section>
+    </>
   )
 }
 export default Home
